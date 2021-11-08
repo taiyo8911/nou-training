@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+main {
+    background-color: black;
+}
+
+.question, .select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    padding: 30px;
+}
+
+.question-text {
+    font-size: 40px;
+}
+
+.select {
+    padding: 30px;
+}
+
+.select-text {
+    font-size: 50px;
+    margin: 5px;
+    cursor: pointer;
+}
