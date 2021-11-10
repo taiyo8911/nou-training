@@ -42,7 +42,7 @@ main {
 }
 
 .select-text {
-    font-size: 50px;
+    font-size: 25%;
     margin: 5px;
     cursor: pointer;
 }
