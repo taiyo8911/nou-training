@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <title>色の名前あてゲーム</title>
+</head>
+
+<body onload="">
+    <section class="main">
+        <div class="container">
+            <h1><a href="index.html">色の名前あてゲーム</a></h1>
+
+            <div class="contents">
+
+                <div class="question-counter">
+                    <span id="question-counter">1</span><span>問目</span>
+                </div>
+
+                <div class="question-container">
+                    <span id="text" class="question-text"></span>
+                </div>
+
+                <div class="select-container">
+                    <button id="select1" class="select-button">1</button>
+                    <button id="select2" class="select-button">2</button>
+                    <button id="select3" class="select-button">3</button>
+                    <button id="select4" class="select-button">4</button>
+                </div>
+
+            </div>
+
+            <div id="retry" style="display: none;">
+                <a href="index.html" class="btn btn--yellow">リトライ</a>
+
+                <div class="twitter" style="display: inline;">
+                    <a href="//twitter.com/share" class="twitter-share-button" data-text="色の名前あてゲーム"
+                        data-url="https://taiyo8911.github.io/nou-training/" data-lang="ja"
+                        data-hashtags="色の名前あてゲーム">ツイート</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

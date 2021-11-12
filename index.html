@@ -3,42 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>脳トレゲーム</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+    <title>色の名前あてゲーム</title>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>脳トレゲームⅡ</h1>
-        </header>
-        <h2>「文字の色の名前」を答えろ！</h2>
-        <main>
-            <div class="question-container">
-                <span id="text" class="question-text"></span>
+    <section class="main">
+        <div class="container">
+            <h1><a href="">色の名前あてゲーム</a></h1>
+            <p style="font-weight: bold;" class="rule">文字の色を答えるゲームです。<br>
+                <span style="color: blue;">黄</span>の場合は「青」が正解
+            </p>
+            <div>
+                <a href="game.html" class="btn btn--yellow btn--cubic">スタート</a>
             </div>
-
-            <div class="select-container">
-                <button id="select1" class="select-text">1</button>
-                <button id="select2" class="select-text">2</button>
-                <button id="select3" class="select-text">3</button>
-                <button id="select4" class="select-text">4</button>
-            </div>
-
-            <div class="question-number-container">
-                <span id="question-number">1</span><span>問目</span>
-            </div>
-
-        </main>
-
-        <footer>
-            <p>made in Taiyo</p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
+            <footer>
+                <p>&copy;Taiyo</p>
+            </footer>
+        </div>
+    </section>
 
 </body>
 

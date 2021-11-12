@@ -1,4 +1,4 @@
-const text = [
+const textArr = [
     "赤",
     "緑",
     "青",
@@ -6,7 +6,7 @@ const text = [
     "黄",
 ]
 
-const text_color = [
+const colorArr = [
     "red",
     "green",
     "blue",
@@ -14,7 +14,7 @@ const text_color = [
     "yellow",
 ]
 
-const answer_color = {
+const colorObj = {
     "red": "赤",
     "green": "緑",
     "blue": "青",
@@ -23,6 +23,14 @@ const answer_color = {
 
 }
 
+// 正解の値
+let correct;
+
+// 選択肢を入れる配列
+let choices = [];
+let choice1; // 正解
+let choice2; // ひっかけ
+let choice3, choice4; // その他
 
 
 // 乱数を作る関数
@@ -32,20 +40,51 @@ function getRandom(min, max) {
 }
 
 
-// 画面にランダムな文字を表示する
-let random_text = text[getRandom(0, text.length)];
+// 画面にランダムな文字を表示する（必須の選択肢）
+let random_text_num = getRandom(0, textArr.length);
+let random_text = textArr[random_text_num];
 document.getElementById("text").innerText = random_text;
 
 
-// 文字の色をランダムな色に変える
-let random_color = text_color[getRandom(0, text_color.length)];
+// 必須選択肢に入れる
+choice1 = random_text;
+choices.push(choice1);
+
+
+// 文字の色をランダムな色に変える（正解の選択肢）
+let random_color_num = getRandom(0, colorArr.length);
+let random_color = colorArr[random_color_num];
 document.getElementById("text").style.color = random_color;
 
+// 正解を決定する
+correct = random_color;
 
-// 文字の「色の名前」をランダムな場所に表示する
+// 必須選択肢に入れる
+choice2 = colorObj[correct];
+choices.push(choice2);
 
-// 1-4のランダムな数値を取得する
-let random_num = getRandom(1, 4);
 
-// 正解の色名をランダムな位置に表示する。
-document.getElementById(`select${random_num}`).innerText = answer_color[random_color];
+// その他の選択肢をランダムに選ぶ
+var index = textArr.indexOf(choice1);
+textArr.splice(index, 1)
+index = textArr.indexOf(choice2);
+textArr.splice(index, 1)
+
+
+choice3 = textArr[getRandom(0, 2)];
+choices.push(choice3);
+
+var index = textArr.indexOf(choice3);
+textArr.splice(index, 1)
+
+choice4 = textArr[getRandom(0, 1)];
+choices.push(choice4);
+
+
+// choices配列の順番をシャッフルして表示
+
+
+// リトライボタンを表示する
+if (count == 10) {
+    document.getElementById("retry").style.display = "block";
+}
